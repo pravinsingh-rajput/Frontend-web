@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+#navbar {
+  width: 100%;
+  height: 3rem;
+  background-color: black;
+  margin-left: 2.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  right: 0;
+  overflow: hidden;
+}
+
+.logo-container {
+  display: flex;
+  font-family: "Sen", sans-serif;
+  flex: 1;
+  color: green;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 2.8rem;
+  height: 2.8rem;
+  padding-right: 4px;
+}
+
+.menu-container {
+  flex: 5;
+}
+
+.menu {
+  display: flex;
+}
+.menu-items {
+  display: flex;
+  text-decoration: none;
+}
+.menu-items a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  margin: 0 0.5rem;
+  padding: 0 0.8rem;
+}
+
+.menu-items.active {
+  font-weight: bold;
+}
+
+.menu-items a:hover {
+  scale: 1.3;
+  transition: all 0.2s;
+  color: cyan;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  font-size: 0.7rem;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  font-size: 0.7rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.profile img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile span {
+  margin-right: 6px;
+  margin-left: 10px;
+  cursor: default;
+}
+
+.profile .fa-solid {
+  font-size: 1.3rem;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.toogle {
+  margin-left: 8px;
+  height: 1.3rem;
+  width: 2.6rem;
+  display: flex;
+  background-color: white;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toogle .toogle-icon {
+  color: goldenrod;
+}
+
+.toogle-ball {
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateX(-0px);
+  transition: all ease 0.8s;
+}
+
+#sidebar {
+  height: 100%;
+  width: 2.5rem;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3.1rem;
+}
+
+.side-bar-icon {
+  color: white;
+  font-size: 1.2rem;
+  padding: 2px;
+  margin-bottom: 3rem;
+}
+
+.side-bar-icon:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+  color: cyan;
+  cursor: pointer;
+}
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 3rem);
+}
+
+.content-container {
+  margin-left: 40px;
+}
+
+/* Container */
+
+.feature-content {
+  height: 50vh;
+  padding-left: 1.5rem;
+}
+.featuredetails {
+  width: 600px;
+  padding: 2rem;
+}
+.featuredetails img {
+  width: 110px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.featuredetails div {
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feature-description {
+  font-size: 12px;
+}
+
+.button {
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background-color: green;
+}
+
+.button:hover {
+  color: black;
+  background-color: yellow;
+  transform: scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* movie-container */
+
+.movie-container {
+  position: relative;
+  margin-left: 10px;
+}
+.movie-list-title {
+  font-size: 26px;
+  margin: 10px 10px;
+}
+
+.movie-list {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list-items {
+  display: flex;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.new-list img {
+  width: 200px;
+  height: 280px;
+  margin: 8px 8px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.new-list .movietitle,
+.moviedesc {
+  position: absolute;
+  margin: 0 15px;
+  width: 180px;
+  background-color: rgb(216, 210, 210);
+  color: black;
+  opacity: 0;
+}
+.new-list:hover .movietitle,
+.new-list:hover .moviedesc {
+  opacity: 100%;
+  transition: 0.7s all ease-in-out;
+}
+
+.new-list .movietitle {
+  font-size: medium;
+  bottom: 80px;
+}
+.new-list .moviedesc {
+  position: absolute;
+  font-size: small;
+  bottom: 30px;
+}
+
+.new-list:hover img:hover {
+  opacity: 50%;
+  scale: 1.05;
+  cursor: pointer;
+  margin: 0px 10px;
+  transition: 0.2s all ease-in-out;
+}
+
+.morelist {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+.morelist:hover {
+  scale: 1.3;
+  transition: all 0.2s;
+  color: cyan;
+  cursor: pointer;
+}
+
+.upcoming-content {
+  position: relative;
+  height: 60vh;
+  padding-left: 1.5rem;
+}
+
+.upcoming-detail {
+  position: absolute;
+  right: 0;
+  top: 130px;
+  width: 30%;
+  padding: 2rem;
+}
+
+.secondfetaure-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  padding: 2rem;
+  padding-left: 200px;
+}
+.trailer {
+  width: 90px;
+  height: 30px;
+  padding: 4px 8px;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.active {
+  background-color: white;
+}
+#navbar.active {
+  background-color: white;
+  color: black;
+}
+
+.menu-items a.active {
+  color: black;
+}
+
+.movie-container.active {
+  color: black;
+}
+.toogle.active {
+  background-color: #151515;
+}
+.toogle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+#sidebar.active {
+  background-color: white;
+}
+
+.side-bar-icon.active {
+  color: black;
+}
+
+.footer-content.active {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 980px) {
+  .menu-container {
+    display: none;
+  }
+}
